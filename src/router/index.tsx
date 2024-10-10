@@ -29,6 +29,13 @@ const staticRoutes: Route[] = [
     meta: {
       title: "Login"
     }
+  },
+  {
+    path: "/day001/register",
+    page: "/src/pages/day001/pages/register/page.tsx",
+    meta: {
+      title: "Register"
+    }
   }
 ];
 
