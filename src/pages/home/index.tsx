@@ -19,14 +19,45 @@ const Home = () => {
             <CardHeader>
               <Link to={route.path!}>{route.meta?.title}</Link>
             </CardHeader>
-            {route.meta?.desc && <CardContent>{route.meta.desc}</CardContent>}
-            {route.meta?.url && (
-              <CardFooter>
-                <a href={route.meta.url} target="_blank" rel="noreferrer">
-                  Watch video
-                </a>
-              </CardFooter>
-            )}
+            <CardContent>
+              {route.meta?.desc && <div>{route.meta?.desc}</div>}
+              {route.meta?.url && (
+                <div>
+                  <a href={route.meta.url} target="_blank" rel="noreferrer">
+                    Watch video
+                  </a>
+                </div>
+              )}
+            </CardContent>
+            <CardFooter className="flex flex-col items-start">
+              {route.meta?.docs && (
+                <div className="mb-4">
+                  <div className="mb-2">Docs</div>
+                  {route.meta?.docs?.map((doc) => (
+                    <a
+                      key={doc.title}
+                      href={doc.url}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {doc.title}
+                    </a>
+                  ))}
+                </div>
+              )}
+              {route.meta?.tags && (
+                <div>
+                  {route.meta?.tags?.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-2 py-0 mr-2 text-sm text-white bg-red-500 rounded-md"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </CardFooter>
           </Card>
         );
       })}

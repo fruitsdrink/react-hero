@@ -8,6 +8,8 @@ type Route = RouteObject & {
     desc?: string;
     url?: string;
     showOnHome?: boolean;
+    tags?: string[];
+    docs?: { title: string; url: string }[];
   };
   children?: Route[];
 };
@@ -20,6 +22,7 @@ const staticRoutes: Route[] = [
       title: "day001",
       desc: "Build a Form with Validation using Shadcn/ui - Step by Step",
       url: "https://youtu.be/LeWhCsQk1PM?si=80Y_fDKRDhwMB6JO",
+      tags: ["react hook form", "validation", "shadcn/ui"],
       showOnHome: true
     }
   },
@@ -35,6 +38,23 @@ const staticRoutes: Route[] = [
     page: "/src/pages/day001/pages/register/page.tsx",
     meta: {
       title: "Register"
+    }
+  },
+  {
+    path: "/day002",
+    page: "/day002/page",
+    meta: {
+      title: "day002",
+      desc: "React Query in 40 Minutes - Everything You Need to Know About Tanstack React Query",
+      url: "https://youtu.be/NOvx4LB6Hfk?si=syVOT7sMS4y7Xqqn",
+      tags: ["react query", "tanstack"],
+      docs: [
+        {
+          title: "React Query 介紹",
+          url: "https://alex-flow-state.netlify.app/react-js/react-query-intro"
+        }
+      ],
+      showOnHome: true
     }
   }
 ];
