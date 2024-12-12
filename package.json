@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.0",
+    "@tanstack/react-router": "^1.87.9",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "json-server": "1.0.0-beta.3",
@@ -23,6 +24,8 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.16.0",
+    "@tanstack/router-devtools": "^1.87.9",
+    "@tanstack/router-plugin": "^1.87.11",
     "@types/node": "^22.10.2",
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.1",
