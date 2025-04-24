@@ -6,12 +6,12 @@ export const Route = createRootRoute({
     meta: [
       {
         name: "description",
-        content: "React Hero, Motion, Framer Motion, React Router"
+        content: "React Hero, Motion, Framer Motion, React Router",
       },
       {
-        title: "React Hero"
-      }
-    ]
+        title: "React Hero",
+      },
+    ],
   }),
   component: () => (
     <>
@@ -19,5 +19,5 @@ export const Route = createRootRoute({
       <Outlet />
       <TanStackRouterDevtools />
     </>
-  )
+  ),
 });
